@@ -1,0 +1,11 @@
+h1 {
+    padding: 0.8em;
+    border: 2px dashed black;
+    margin: 0.8em;
+}
+
+h2 {
+    padding: 0.5em;
+    border: 2px dotted black;
+    margin: 0.5em;
+}
