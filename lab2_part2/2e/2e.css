@@ -1,0 +1,21 @@
+.tabs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: thin solid black;
+}
+
+.tabs li {
+  display: inline-block;
+  width: 100px;
+  border: thin solid black;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.tabs li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: black;
+}

@@ -1,0 +1,13 @@
+body {
+  font-family: "Times New Roman";
+}
+
+h1, h2 {
+  color: green;     /* Sets text color */
+  font-size: 22pt;  /* Sets font size */
+}
+
+p {
+  color: black;     /* Sets text color */
+  font-size: 12pt;  /* Sets font size */
+}
