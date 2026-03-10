@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reverse Binary and Convert to Decimal</title>
+</head>
+<body>
+
+<h2>Reverse Binary Representation</h2>
+
+<input type="number" id="numInput" placeholder="Enter a positive integer">
+<button onclick="processNumber()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function reverseString(str){
+    if(str.length <= 1) return str;
+    return reverseString(str.slice(1)) + str[0];
+}
+
+function processNumber(){
+    let num = parseInt(document.getElementById("numInput").value);
+    let binary = num.toString(2);
+    let reversed = reverseString(binary);
+    let decimal = parseInt(reversed,2);
+    document.getElementById("result").innerText = "Decimal after reversing binary: " + decimal;
+}
+</script>
+
+</body>
+</html>

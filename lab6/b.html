@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Divide and Conquer Array Sum</title>
+</head>
+
+<body>
+
+    <h2>Divide and Conquer Sum</h2>
+
+    <input id="nums" placeholder="numbers separated by commas">
+    <button onclick="calc()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function sum(arr, l, r) {
+            if (l > r)
+                return 0;
+
+            if (l === r)
+                return arr[l];
+
+            let m = Math.floor((l + r) / 2);
+
+            return sum(arr, l, m) + sum(arr, m + 1, r);
+        }
+
+        function calc() {
+            let a = document.getElementById("nums").value
+                        .split(",")
+                        .map(Number);
+
+            document.getElementById("result").innerText =
+                "Sum: " + sum(a, 0, a.length - 1);
+        }
+
+    </script>
+
+</body>
+</html>

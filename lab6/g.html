@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove Items from Dropdown</title>
+</head>
+<body>
+
+<h2>Dropdown List</h2>
+
+<select id="myList">
+<option>robin</option>
+<option>dove</option>
+<option>hawk</option>
+<option>ostrich</option>
+</select>
+
+<br><br>
+
+<button onclick="removeItem()">Remove Selected Item</button>
+<button onclick="countItems()">Count Items</button>
+
+<script>
+function removeItem(){
+    let list = document.getElementById("myList");
+    list.remove(list.selectedIndex);
+}
+
+function countItems(){
+    let list = document.getElementById("myList");
+    alert("Total items: " + list.length);
+}
+</script>
+
+</body>
+</html>

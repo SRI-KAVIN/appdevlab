@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Array Sum</title>
+</head>
+
+<body>
+
+    <h2>Recursive Sum </h2>
+
+    <input id="nums" placeholder="numbers separated by commas">
+    <button onclick="calc()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function sum(arr, i) {
+            if (i >= arr.length) 
+                return 0;
+            return arr[i] + sum(arr, i + 1);
+        }
+
+        function calc() {
+            let a = document.getElementById("nums").value
+                        .split(",")
+                        .map(Number);
+
+            document.getElementById("result").innerText =
+                "Sum: " + sum(a, 0);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Binary to Decimal Using Recursion</title>
+</head>
+<body>
+
+<h2>Binary to Decimal Conversion</h2>
+
+<input type="text" id="binaryInput" placeholder="Enter a binary number">
+<button onclick="convert()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function binaryToDecimal(bin, index){
+    if(index < 0) return 0;
+    return (bin[index] * Math.pow(2, bin.length - index - 1)) + binaryToDecimal(bin, index - 1);
+}
+
+function convert(){
+    let bin = document.getElementById("binaryInput").value;
+    let decimal = binaryToDecimal(bin, bin.length - 1);
+    document.getElementById("result").innerText = "Decimal: " + decimal;
+}
+</script>
+
+</body>
+</html>
